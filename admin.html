@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+<!-- ================= LOGIN SCREEN ================= -->
+<div class="login-wrap" id="login-screen">
+  <div class="login-card">
+    <h1>Admin Login</h1>
+    <p>// masuk untuk mengelola konten portofolio</p>
+    <label for="pw">Password</label>
+    <input type="password" id="pw" placeholder="••••••••">
+    <button class="btn btn-primary" id="login-btn">Masuk</button>
+    <div id="login-error"></div>
+  </div>
+</div>
+
+<!-- ================= ADMIN DASHBOARD ================= -->
+<div id="dashboard" style="display:none;">
+  <div class="admin-topbar">
+    <div class="brand">⚙ admin-panel — portofolio</div>
+    <div class="actions">
+      <a href="index.html" class="btn btn-ghost" target="_blank">Lihat Situs ↗</a>
+      <button class="btn btn-danger" id="logout-btn">Keluar</button>
+    </div>
+  </div>
+
+  <main class="admin-main">
+    <div class="admin-grid">
+
+      <!-- Profil -->
+      <div class="admin-panel">
+        <h2>Profil</h2>
+        <div class="field">
+          <label for="f-name">Nama</label>
+          <input id="f-name">
+        </div>
+        <div class="field">
+          <label for="f-roles">Daftar peran (pisahkan dengan koma)</label>
+          <input id="f-roles" placeholder="Frontend Developer, Web Enthusiast">
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="admin-panel">
+        <h2>About Me</h2>
+        <div class="field">
+          <label for="f-about1">Paragraf 1</label>
+          <textarea id="f-about1"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-about2">Paragraf 2</label>
+          <textarea id="f-about2"></textarea>
+        </div>
+      </div>
+
+      <!-- Kontak -->
+      <div class="admin-panel">
+        <h2>Info Kontak</h2>
+        <div class="field"><label for="f-email">Email</label><input id="f-email"></div>
+        <div class="field"><label for="f-github">GitHub</label><input id="f-github"></div>
+        <div class="field"><label for="f-linkedin">LinkedIn</label><input id="f-linkedin"></div>
+      </div>
+
+      <!-- tombol simpan untuk 3 panel di atas -->
+      <button class="btn btn-primary" id="save-profile-btn" style="width:fit-content;">Simpan Profil, About &amp; Kontak</button>
+
+      <!-- Projects -->
+      <div class="admin-panel">
+        <h2>Proyek <span class="count" id="project-count">0</span></h2>
+        <div id="project-list"></div>
+        <button class="btn btn-ghost" id="add-project-btn">+ Tambah Proyek</button>
+      </div>
+
+      <!-- Pesan masuk -->
+      <div class="admin-panel">
+        <h2>Pesan Masuk <span class="count" id="msg-count">0</span></h2>
+        <div id="message-list"></div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<div id="save-toast">Tersimpan ✓</div>
+
+<script src="data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
