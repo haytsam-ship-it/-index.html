@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haytsam Suchandra Wiranegara — Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="titlebar">
+    <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+    <span class="titlebar-name">haytsam-portofolio — main.js</span>
+  </div>
+  <nav>
+    <a href="#hero" class="active">index.js</a>
+    <a href="#about">about.js</a>
+    <a href="#projects">projects.js</a>
+    <a href="#contact">contact.js</a>
+    <a href="admin.html" style="margin-left:auto; color:var(--text-dim);">admin →</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <div class="container">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+        <span>zsh — intro.sh</span>
+      </div>
+      <div class="terminal-body">
+        <div class="line"><span class="kw">const</span> <span class="prop">developer</span> <span class="punc">=</span> <span class="punc">{</span></div>
+        <div class="line" style="padding-left:20px;"><span class="prop">name</span><span class="punc">:</span> <span class="str">"<span id="hero-name"></span>"</span><span class="punc">,</span></div>
+        <div class="line" style="padding-left:20px;"><span class="prop">role</span><span class="punc">:</span> <span class="str">"<span id="typed-role"></span><span class="cursor">&nbsp;</span>"</span></div>
+        <div class="line"><span class="punc">}</span><span class="punc">;</span></div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+      <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="eyebrow">tentang</div>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="file-card">
+        <div class="fc-title">profile.json</div>
+        <ul>
+          <li>Status: Pelajar &amp; Web Developer</li>
+          <li>Stack: HTML, CSS, JavaScript</li>
+          <li>Fokus: Frontend Development</li>
+          <li>Lokasi: Indonesia</li>
+        </ul>
+      </div>
+      <div id="about-text">
+        <p id="about-p1"></p>
+        <p id="about-p2"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="eyebrow">proyek</div>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="eyebrow">kontak</div>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-wrap">
+      <form id="contact-form">
+        <div>
+          <label for="c-name">Nama</label>
+          <input id="c-name" required>
+        </div>
+        <div>
+          <label for="c-email">Email</label>
+          <input id="c-email" type="email" required>
+        </div>
+        <div>
+          <label for="c-msg">Pesan</label>
+          <textarea id="c-msg" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Kirim Pesan</button>
+        <div id="form-status"></div>
+      </form>
+      <div class="contact-info" id="contact-info"></div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> <span id="footer-name"></span> — built with HTML, CSS &amp; JS</footer>
+
+<script src="data.js"></script>
+<script src="view.js"></script>
+</body>
+          </html>
